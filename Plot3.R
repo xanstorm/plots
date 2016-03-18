@@ -11,7 +11,7 @@ paste(df$Date,df$Time,sep = " ") #Combine date and time to char vector
 DateTime<-strptime(paste(df$Date,df$Time,sep = " "),format="%d/%m/%Y %H:%M:%S")# Creates datetime vector
 df.tidy<-cbind(DateTime,df[,-(1:2)])
 
-png(file="Plot3.png")
+png(file="Plot3.png",width = 480, height = 480)
 with(df.tidy, {
         plot(DateTime,Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
         points(DateTime, Sub_metering_2, type = "l", col="red")
