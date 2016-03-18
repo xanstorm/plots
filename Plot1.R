@@ -8,7 +8,7 @@ df<-data[index,] # Create subset of data with dates above
 
 
 #Plot
-png(file="Plot1.png")
+png(file="Plot1.png",width = 480, height = 480)
 hist(df$Global_active_power, col = "red", main = "Global Active Power", xlab= "Global Active Power (kilowatts)", 
 xlim=c(0,7.5), axes=FALSE)
 axis(1, at=c(0,2,4,6),labels = TRUE)
