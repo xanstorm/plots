@@ -14,3 +14,6 @@ with(df)
 df.tidy
 with(df.tidy, plot(DateTime,Global_active_power, type ="l", ylab="Global Active Power (kilowatts)", xlab=""))
 
+png(file="Plot2.png",width = 480, height = 480)
+with(df.tidy, plot(DateTime,Global_active_power, type ="l", ylab="Global Active Power (kilowatts)", xlab=""))
+dev.off()
