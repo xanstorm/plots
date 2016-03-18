@@ -11,7 +11,7 @@ paste(df$Date,df$Time,sep = " ") #Combine date and time to char vector
 DateTime<-strptime(paste(df$Date,df$Time,sep = " "),format="%d/%m/%Y %H:%M:%S")# Creates datetime vector
 df.tidy<-cbind(DateTime,df[,-(1:2)])
 
-png(file="Plot4.png")
+png(file="Plot4.png",width = 480, height = 480)
 par(mfrow=c(2,2))
 with(df.tidy, {
         #1st Plot
@@ -26,3 +26,4 @@ with(df.tidy, {
         #4th Plot
         plot(DateTime,Global_reactive_power, type ="l", xlab="datetime")
 })
+dev.off()
